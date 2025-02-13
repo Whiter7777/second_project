@@ -8,7 +8,7 @@ from models.user_model import Message, User
 from utilities.generate_random_post_object import RandomPostGenerator
 
 
-class TestUser:
+class TestAPI:
     @pytest.fixture(scope='class')
     def client(self):
         return ApiIClient()
@@ -62,4 +62,4 @@ class TestUser:
                                         TestManager.get_test_data().user_id)
         AssertUser().assert_status_code(response, HTTPStatus.OK)
         AssertUser().assert_schema(response, User)
-        assert response.json() == TestUser().test_get_users(client)
+        assert response.json() == TestAPI().test_get_users(client)
