@@ -1,13 +1,10 @@
 {
-  "all_messages": "/posts",
-  "all_messages_item": "/posts/{}",
-  "all_users": "/users",
-  "all_users_item": "/users/{}",
   "message_userid_real": 10,
   "message_id_real": 99,
   "message_id_unreal": 150,
   "user_id": 5,
   "userid_1": 1,
+  "id_101": 101,
   "letters_quant_in_range": [4, 7],
   "message_id_99": {
     "userId": 10,

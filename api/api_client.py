@@ -4,8 +4,8 @@ from httpx import Client
 
 
 class ApiIClient(Client):
-    def __init__(self):
-        super().__init__(base_url=ConfigManager().get_config_data().baseUrl)
+    def __init__(self, base_url):
+        super().__init__(base_url=base_url)
 
     @allure.step('Making GET request to "{url}"')
     def get(self, url, params=None):

@@ -1,12 +1,12 @@
 import os
 from pathlib import Path
 from utilities.deserialize_json import DeserializeJson
-from models.user_model import TestModel
+from models.test_data_model import TestDataModel
 
 class TestManager:
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    config_file_path = Path(os.path.join(BASE_DIR, "../resourses", "test_data.json")).resolve()
+    BASE_DIR = os.path.dirname(os.getcwd())
+    config_file_path = Path(os.path.join(BASE_DIR, "resourses/test_data.json")).resolve()
 
     @classmethod
     def get_test_data(cls):
-        return TestModel.model_validate_json(DeserializeJson().deserialize_json(cls.config_file_path))
+        return TestDataModel.model_validate_json(DeserializeJson().deserialize_json(cls.config_file_path))

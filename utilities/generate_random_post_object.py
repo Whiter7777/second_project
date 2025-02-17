@@ -13,4 +13,5 @@ class RandomPostGenerator:
     def generate_random_post(letters_min_max: tuple[int, int], user_id: int):
         return {"title": RandomPostGenerator().generate_random_name(letters_min_max),
                 "body": RandomPostGenerator().generate_random_name(letters_min_max),
-                "userId": user_id}
+                "userId": user_id
+                }
