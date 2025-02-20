@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from utilities.deserialize_json import DeserializeJson
-from models.test_data_model import TestDataModel
+from models.test_data_model import DataModel
 
 class TestManager:
     BASE_DIR = os.path.dirname(os.getcwd())
@@ -9,4 +9,4 @@ class TestManager:
 
     @classmethod
     def get_test_data(cls):
-        return TestDataModel.model_validate_json(DeserializeJson().deserialize_json(cls.config_file_path))
+        return DataModel.model_validate_json(DeserializeJson().deserialize_json(cls.config_file_path))

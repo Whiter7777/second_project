@@ -1,4 +1,3 @@
-from configurations.configuration import ConfigManager
 import allure
 from httpx import Client
 

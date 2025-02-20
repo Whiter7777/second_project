@@ -3,7 +3,7 @@ from models.post_model import PostModel
 from models.user_model import UserModel
 
 
-class TestDataModel(BaseModel):
+class DataModel(BaseModel):
     message_userid_real: int
     message_id_real: int
     message_id_unreal: int
