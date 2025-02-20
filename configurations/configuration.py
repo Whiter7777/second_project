@@ -5,8 +5,8 @@ from utilities.deserialize_json import DeserializeJson
 
 
 class ConfigManager:
-    BASE_DIR = os.path.dirname(os.getcwd())
-    config_file_path = Path(os.path.join(BASE_DIR, "pythonProject3/resourses/config.json")).resolve()
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    config_file_path = Path(os.path.join(BASE_DIR, "../resourses", "test_data.json")).resolve()
 
     @classmethod
     def get_config_data(cls):
